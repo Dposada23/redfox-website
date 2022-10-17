@@ -3,9 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <title>Red Fox Contractor</title>
-    <link rel = "icon" type = "image/png" href = "/redfox-logo1.png"/>
-    <link rel="apple-touch-icon" href="images/redfox-logo1.png" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="assets/icons/site.webmanifest">
+    <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="main.scss"/>
+    <link rel="stylesheet" href="main.css"/>
     <link rel="manifest" href="/manifest.json" />
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/glide.core.css">
@@ -13,6 +19,12 @@
     <link rel="stylesheet" href="assets/css/bootstrap-5.0.5-alpha.min.css">
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="js/main.js"></script>
     <script src="assets/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
     <script src="assets/js/glide.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
@@ -23,8 +35,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="white" />
   </head>
-  
+
+  <!--css only-->
+    <style>
+      .gradient-background{
+        background: rgb(252,176,69);
+        background: linear-gradient(90deg, rgba(252,176,69,1) 6%, rgba(252,74,26,1) 100%);
+       }
+       *{
+         font-family: 'Bebas Neue', cursive; 
+   
+       }
+      
+      @font-face {
+        font-family: "inlander";
+        src: url(assets/fonts/Inlander/Inlander-Regular.ttf) format('truetype');
+      }
+  </style>
+
   <body>
+    <!------------------------------------------------------ Navbar ------------------------------------------------------>
     <section id="home" class="header_area">
       <div id="header_navbar" class="header_navbar">
       <div class="container">
@@ -32,7 +62,7 @@
       <div class="col-lg-12">
       <nav class="navbar navbar-expand-lg">
       <a class="navbar-brand" href="#">
-      <img id="logoimg" src="assets/images/redfox-logo1.png" alt="Logo">
+      <img id="logoimg" src="assets/images/redfox-logo3.png" alt="Logo">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="toggler-icon"></span>
@@ -54,12 +84,13 @@
       <a class="page-scroll" href="#team">Team</a>
       </li>
       <li class="nav-item">
-      <a class="page-scroll" href="#contact">Contact</a>
+      <a class="page-scroll " href="#contact">Contact</a>
       </li>
-      <li class="nav-item">
-        <button type="button" class="btn btn-danger" href="schedule">Schedule a Consultation</button>
-        
-      </li>
+      <!--
+        <li class="nav-item">
+          <a type="button" class="btn btn-light gradient-background"href="#contact">Request a Quote</a>
+        </li>
+      -->
       </ul>
       </div>
       </nav>
@@ -67,14 +98,25 @@
       </div>
       </div>
       </div>
+    </div>
+
+    <!----------------------------------------------------- Hero --------------------------------------------------------->
       <div class="header_hero">
-      <div class="single_hero bg_cover d-flex align-items-center" style="background-image: url(assets/images/metal-roofing.jpg)">
+      <div class="single_hero bg_cover d-flex align-items-center" style="background-image: url(assets/images/construction_bg2.jpg)">
       <div class="container">
       <div class="row justify-content-center">
       <div class="col-lg-8 col-md-10">
       <div class="hero_content text-center">
-      <h1 class= "hero_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" > <br /></h1>
-      <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Call us at  <br />1024 S 14th St</p>
+        <div class="alert alert-warning" role="alert">
+          THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION!
+        </div>
+      <h1 class= "wow fadeInUp font-family" data-wow-duration="1.3s" data-wow-delay="0.2s" style="font-size:50px ;color: white;"> <br />Professionals You Can Trust</h1>
+      <br>
+      <a class="page-scroll active" href="#services">
+        <button class="main-btn gradient-background wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s" type="button">
+          Lets get started
+        </button>
+      </a>
       </div>
       </div>
       </div>
@@ -82,17 +124,18 @@
       </div>
       </div>
       </section>    
-    <script src="js/main.js"></script>
+    
     <section id="pricing" class="pricing_area pt-120 pb-130">
       <div class="container">
       <div class="row justify-content-center">
       <div class="col-lg-6">
        <div class="section_title text-center pb-25">
-      <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Welocme to Red Fox Contractor</h4>
-      <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Special prices for only July 31 while event goes on. Sign up for any package through event and get a free 30 minute massage and a 5% discount.</p>
+      <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Welcome to Red Fox</h4>
+      <p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Red Fox is a new found business working hard & building a reputable team of leaders in the construction industry.</p>
       </div>
       </div>
       </div>
+        
       <!--<div class="row justify-content-center">
       <div class="col-lg-4 col-md-8 col-sm-10">
       <div class="single_pricing text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
@@ -155,6 +198,16 @@
       </section>
       -->
 
+      <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFO2rMH9d8&#x2F;watch?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAFO2rMH9d8&#x2F;watch?utm_content=DAFO2rMH9d8&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"> Product Promotion Video</a> by Piri & Vanessa Yanez
+      
+<!------------------------------------------------- About us ------------------------------------------------------------->
 <section id="about" class="pt-130">
 <div class="about_area">
 <div class="container">
@@ -163,23 +216,19 @@
 <div class="about_content pt-120 pb-130">
 <div class="section_title pb">
 <h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Why Choose Red Fox Contractor</h4>
-<p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor
-sit amet, consetetur sadipscing elitr, sed dianonumy eirmod tempor invidunt ut
-labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-dolores et erebum</p>
-<p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.6s">Lorem ipsum dolor
-sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-ut labore etdolore maali quyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-dolores</p>
+<p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Red Fox is your local knowledgeable contractor based out of Bertram Tx, surrounding counties and anywhere from state line to state line. We are backed by a team with tremendous experience & we offer a wide range of services.
+</p>
+<p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.6s">We look foward to transcending your outlook of what it is to work with reliable & responsible contractors.
+</p>
 </div>
-<a href="#" class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.7s">Learn More</a>
+<a href="#" class="main-btn wow fadeInUp gradient-background" data-wow-duration="1.3s" data-wow-delay="0.7s">Learn More</a>
 </div>
 </div>
 </div>
 </div>
-<div class="about_image bg_cover wow fadeInLeft" data-wow-duration="1.3s" data-wow-delay="0.2s" style="background-image: url(assets/images/about.jpg)">
+<div class="about_image bg_cover wow fadeInLeft" data-wow-duration="1.3s" data-wow-delay="0.2s" style="background-image: url(assets/images/construction_bg.jpg)">
 <div class="image_content">
-<h4 class="experience"><span>5</span> Years of Experience</h4>
+<h4 class="experience gradient-background"><span>10</span> Years of Experience</h4>
 </div>
 </div>
 </div>
@@ -245,102 +294,110 @@ amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor 
 </section>
 -->
 
+<!----------------------------------------------------- Services -------------------------------------------------------->
 <section id="services" class="portfolio_area pt-120">
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-lg-6">
 <div class="section_title text-center pb-60">
-<h4 class="title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">Our Services</h4>
-<p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">Lorem ipsum dolor sit
-amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor dolore.</p>
+<h4 class="title wow fadeInUp font" data-wow-duration="1.3s" data-wow-delay="0.2s">Our Services</h4>
+<p class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s"></p>
 </div>
 </div>
 </div>
 </div>
-<div class="portfolio_wrapper d-flex flex-wrap">
+
+<div class="portfolio_wrapper d-flex flex-wrap ">
 <div class="single_portfolio text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-  <h4 class ="underground-util">Underground Utility</h4>
-  <img src="assets/images/ug3.jpg" alt="portfolio">
+  <h4 class ="underground-util font">Underground Utility</h5>
+  <img src="assets/images/underground-util/ug5.jpg" alt="underground-util">
 <div class="portfolio_content">
 <ul class="meta">
-<li><a href="#"><i class="lni lni-link"></i></a></li>
+<li><a href="underground-util.html"><i class="lni lni-link"></i></a></li>
 </ul>
-<h5 class="portfolio_title">Underground utility</h5>
+<h5 class="portfolio_title font">Underground Utility</h5>
 </div>
 </div>
 
 <div class="single_portfolio text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.3s">
-  <h4 class ="underground-util">Concrete</h4>
-  <img src="assets/images/concrete1.jpg" alt="massage">
+  <h4 class ="underground-util font">Concrete</h5>
+  <img src="assets/images/concrete/concrete1.jpg" alt="concrete">
 <div class="portfolio_content">
 <ul class="meta">
-<li><a href="#"><i class="lni lni-link"></i></a></li>
+<li><a href="concrete.html"><i class="lni lni-link"></i></a></li>
 </ul>
-<h5 class="portfolio_title">Concrete</h5>
+<h5 class="portfolio_title font">Concrete</h5>
 </div>
 </div>
 
 <div class="single_portfolio text-center mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-  <h4 class ="underground-util">Metal Building Erections</h4>
+  <h4 class ="underground-util font">Metal Building Erections</h5>
   <img src="assets/images/metal-building.jpg" alt="portfolio">
 <div class="portfolio_content">
 <ul class="meta">
-<li><a href="#"><i class="lni lni-link"></i></a></li>
+<li><a href="metal-building.html"><i class="lni lni-link"></i></a></li>
 </ul>
-<h5 class="portfolio_title">Metal Building Erection</h5>
+<h5 class="portfolio_title poppins">Metal Building Erection</h5>
 </div>
 </div>
 
-<!--<div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+<div class="single_portfolio wow text-center mt-30 fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+  <h4 class = "other stuff font">Other Services</h5>
 <img src="assets/images/portfolio-4.jpg" alt="portfolio">
 <div class="portfolio_content">
 <ul class="meta">
 <li><a href="#"><i class="lni lni-link"></i></a></li>
 </ul>
-<h5 class="portfolio_title">UI/UX Projects</h5>
+<h5 class="portfolio_title">Other Services</h5>
 </div>
 </div>
+
+<!---
+    <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
+      <img src="https://drive.google.com/file/d/1Ey_50lIa4W-Hjz1gZyVTACThzks79RoM" alt="portfolio">
+      <div class="portfolio_content">
+        <ul class="meta">
+          <li><a href="#"><i class="lni lni-link"></i></a></li>
+        </ul>
+        <h5 class="portfolio_title">App Development</h5>
+      </div>
+    </div>
+
+    <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.3s">
+      <img src="assets/images/portfolio-6.jpg" alt="portfolio">
+      <div class="portfolio_content">
+        <ul class="meta">
+          <li><a href="#"><i class="lni lni-link"></i></a></li>
+        </ul>
+        <h5 class="portfolio_title">Web Development</h5>
+      </div>
+    </div>
+
+    <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
+    <img src="assets/images/portfolio-7.jpg" alt="portfolio">
+      <div class="portfolio_content">
+        <ul class="meta">
+          <li><a href="#"><i class="lni lni-link"></i></a></li>
+        </ul>
+        <h5 class="portfolio_title">Business Card Design</h5>
+      </div>
+    </div>
+
+    <div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
+      <img src="assets/images/portfolio-8.jpg" alt="portfolio">
+      <div class="portfolio_content">
+        <ul class="meta">
+          <li><a href="#"><i class="lni lni-link"></i></a></li>
+        </ul>
+        <h5 class="portfolio_title">Consulting Business</h5>
+      </div>
+    </div>
 -->
-<!--
-<div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
-<img src="assets/images/portfolio-5.jpg" alt="portfolio">
-<div class="portfolio_content">
-<ul class="meta">
-<li><a href="#"><i class="lni lni-link"></i></a></li>
-</ul>
-<h5 class="portfolio_title">App Development</h5>
-</div>
-</div>
-<div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.3s">
-<img src="assets/images/portfolio-6.jpg" alt="portfolio">
-<div class="portfolio_content">
-<ul class="meta">
-<li><a href="#"><i class="lni lni-link"></i></a></li>
-</ul>
-<h5 class="portfolio_title">Web Development</h5>
-</div>
-</div>
-<div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-<img src="assets/images/portfolio-7.jpg" alt="portfolio">
-<div class="portfolio_content">
-<ul class="meta">
-<li><a href="#"><i class="lni lni-link"></i></a></li>
-</ul>
-<h5 class="portfolio_title">Business Card Design</h5>
-</div>
-</div>
-<div class="single_portfolio wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">
-<img src="assets/images/portfolio-8.jpg" alt="portfolio">
-<div class="portfolio_content">
-<ul class="meta">
-<li><a href="#"><i class="lni lni-link"></i></a></li>
-</ul>
-<h5 class="portfolio_title">Consulting Business</h5>
-</div>
-</div>
--->
+
 </div>
 </section>
+
+
 
 <!--
 <section id="pricing" class="pricing_area pt-120 pb-130">
@@ -402,6 +459,7 @@ amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor 
 </section>
 -->
 
+<!--------------------------------------------------- Meet The Team ------------------------------------------------------>
 <section id="team" class="team_area pt-120 pb-130">
 <div class="container">
 <div class="row justify-content-center">
@@ -419,8 +477,8 @@ amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor 
 <div class="single_team mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">
 <img src="assets/images/team-1.jpg" alt="team">
 <div class="team_content">
-<h4 class="team_name"><a href="#">Alex Y.</a></h4>
-<p></p>
+<h4 class="team_name"><a href="#"> PIRI Y.</a></h4>
+<p>Production Manager</p>
 <ul class="social">
 <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
 <li><a href="#"><i class="lni lni-twitter-original"></i></a></li>
@@ -450,9 +508,9 @@ amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt labor 
 
 <div class="col-lg-4 col-md-8 col-sm-10">
 <div class="single_team mt-30 wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
-<img src="assets/images/team-3.jpg" alt="team">
+<img src="assets/images/team-1b.jpg" alt="team">
 <div class="team_content">
-<h4 class="team_name"><a href="#">Piri Y</a></h4>
+<h4 class="team_name"><a href="#">ALEX Y</a></h4>
 <p>Production Manager</p>
 <ul class="social">
 <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
@@ -515,8 +573,8 @@ vero eos accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
 </div>
 </section>
 -->
-
-<section id="contact" class="contact_area bg_cover pt-120 pb-130" style="background-image: url(assets/images/contact_bg.jpg)">
+<!----------------------------------------------------- Contact ---------------------------------------------------------->
+<section id="contact" class="contact_area bg_cover pt-120 pb-130" style="background-image: url(assets/images/contact_bg2.jpg)">
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-lg-6">
@@ -556,7 +614,7 @@ vero eos accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
 <p class="form-message"></p>
 <div class="col-lg-12">
 <div class="single_form text-center">
-<button class="main-btn" type="submit">SUBMIT</button>
+<button class="main-btn gradient-background" type="submit">SUBMIT</button>
 </div>
 </div>
 </div>
@@ -565,7 +623,7 @@ vero eos accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
 </section>
 
 
-<footer id="footer" class="footer_area">
+<footer id="footer" class="footer_area gradient-background">
 <div class="container">
 <div class="footer_wrapper text-center d-lg-flex align-items-center justify-content-between">
 <p class="credit"> </p>
@@ -581,6 +639,11 @@ vero eos accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.
 </div>
 </footer>
 
-<a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+    <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+           integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+           crossorigin="anonymous">
+          </script>
+           
   </body>
 </html>
