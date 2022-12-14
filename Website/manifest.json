@@ -1,0 +1,33 @@
+{
+    "name": "Red Fox Contractor LLC",
+    "short_name": "Red Fox",
+    "icons": [
+      {
+        "src": "public/assets/icons/icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "purpose": "any"
+      },
+
+      {
+        "src": "public/assets/icons/icon-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable"
+
+      },
+
+      {
+        "src": "public/assets/icons/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+    ],
+    "lang": "en-US",
+    "start_url": "public/index.html",
+    "id": "/index.html",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "black"
+  }
