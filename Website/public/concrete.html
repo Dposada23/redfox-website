@@ -6,11 +6,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="/Website/manifest.json">
     <link rel="manifest" href="assets/icons/site.webmanifest">
     <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#000000">
-    <link rel="stylesheet" href="main.scss" />
+    <link rel="stylesheet" href="main.scss"/>
+    <link rel="stylesheet" href="main.css"/>
     <link rel="manifest" href="/manifest.json" />
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/glide.core.css">
@@ -18,16 +20,17 @@
     <link rel="stylesheet" href="assets/css/bootstrap-5.0.5-alpha.min.css">
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href ="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
     <script src="js/main.js"></script>
     <script src="assets/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
     <script src="assets/js/glide.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="white" />
   </head>
@@ -38,9 +41,36 @@
         background: rgb(252,176,69);
         background: linear-gradient(90deg, rgba(252,176,69,1) 6%, rgba(252,74,26,1) 100%);
        }
-       .font{
-         font-family: poppins;
+       *{
+         font-family: 'Bebas Neue', cursive; 
        }
+       .service {
+			list-style-type: disc;
+			margin: 0;
+      font-size: 20px;
+			padding: 0;
+			overflow: hidden; 
+      list-style-position: inside;
+		
+		}
+		.service li {
+			float: center;
+			color: white;
+			text-align: center;
+			padding: 14px 8px;
+			text-decoration: none;
+    
+		}
+		
+		@media screen and (max-width: 650px) {
+			.service li {
+				float: none;
+        text-align: start;
+      
+			}
+    }
+		
+
   </style>
 
   <body>
@@ -68,8 +98,12 @@
       <a class="page-scroll" href="index.html#about">About</a>
       </li>
       <li class="nav-item">
+        <a class="page-scroll" href="saftey.html">Saftey</a>
+      </li>
+      <li class="nav-item">
       <a class="page-scroll" href="index.html#services">Services</a>
       </li>
+    
       <li class="nav-item">
       <a class="page-scroll" href="index.html#team">Team</a>
       </li>
@@ -98,10 +132,20 @@
       <div class="col-lg-8 col-md-10">
       <div class="hero_content text-center">
         
-      <h1 class= "hero_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style = "font-family: poppins">CONCRETE</h1>
+      <h1 class= "hero_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">CONCRETE</h1>
       <br>
-
-      </a>
+      <div class="service-desc">
+        <ul class = "service wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s" >
+           <li>INDUSTRIAL SUB, COMMERCIAL, RESIDENTAIL</li>
+           <li>NATURAL GAS COMPRESSOR STATION FOUNDATION</li>
+           <li>METER STATION</li>
+           <li>PUMP STATION</li>
+           <li>DEMOLITION & REPLACEMENT</li>
+           <li>CONCRETE SLABS, DRIVEWAYS</li>
+           <li>PARKING LOTS</li>
+         </ul>
+       </div>
+     
       </div>
       </div>
       </div>
@@ -119,65 +163,66 @@
       <div class="row text-center text-lg-start">
     
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="assets/images/Concrete/concrete2.jpg" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="assets/images/Concrete/concrete2.jpg" alt="">
+          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete2.jpg?alt=media&token=95068720-612d-498d-a14e-26bc968da33f" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete2.jpg?alt=media&token=95068720-612d-498d-a14e-26bc968da33f" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="assets/images/Concrete/concrete3.jpg" alt="">
+          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete31.jpg?alt=media&token=82301ff2-02ea-46a3-8c96-1d29e64877be"class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete31.jpg?alt=media&token=82301ff2-02ea-46a3-8c96-1d29e64877be" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="assets/images/Concrete/concrete4.jpg" alt="">
+          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete4.jpg?alt=media&token=57361a7a-78c2-4399-9ee5-c3166d72274d"class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete4.jpg?alt=media&token=57361a7a-78c2-4399-9ee5-c3166d72274d" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="assets/images/Concrete/concrete5.jpg" alt="">
+          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete32.jpg?alt=media&token=3616a571-3c81-416c-abc3-22abe9b4e017"class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete32.jpg?alt=media&token=3616a571-3c81-416c-abc3-22abe9b4e017" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="assets/images/Concrete/concrete6.jpg" alt="">
+          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete6.jpg?alt=media&token=a6088749-2262-44e6-9835-e4b6d4603059"class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete6.jpg?alt=media&token=a6088749-2262-44e6-9835-e4b6d4603059" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="assets/images/Concrete/concrete7.jpg" alt="">
+          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete7.jpg?alt=media&token=10b0260f-4878-48f7-a63a-c07e1290681b"class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete7.jpg?alt=media&token=10b0260f-4878-48f7-a63a-c07e1290681b" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="assets/images/Concrete/concrete8.jpg" alt="">
+          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete24.jpg?alt=media&token=69e63c78-547c-4fb5-a1a2-030f2c35bac2"class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete24.jpg?alt=media&token=69e63c78-547c-4fb5-a1a2-030f2c35bac2" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="assets/images/Concrete/concrete9.jpg" alt="">
+          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete9.jpg?alt=media&token=32b0973a-cfee-44d7-9310-b5271e917e60"class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete9.jpg?alt=media&token=32b0973a-cfee-44d7-9310-b5271e917e60" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="assets/images/Concrete/concrete10.jpg" alt="">
+          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete10.jpg?alt=media&token=27ab4296-31d5-415a-841c-25d62179a8af" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete10.jpg?alt=media&token=27ab4296-31d5-415a-841c-25d62179a8af" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="assets/images/Concrete/concrete11.jpg" alt="">
+          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete11.jpg?alt=media&token=64a62844-bdc6-4758-9f46-df20716151aa" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete11.jpg?alt=media&token=64a62844-bdc6-4758-9f46-df20716151aa" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="assets/images/Concrete/concrete12.jpg" alt="">
+          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete12.jpg?alt=media&token=9552436f-a309-4383-b482-e57f500ef0ed" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete12.jpg?alt=media&token=9552436f-a309-4383-b482-e57f500ef0ed" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="assets/images/Concrete/concrete13.jpg" alt="">
+          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete13.jpg?alt=media&token=c763d337-c137-4b0f-a43d-575ee00d6fce" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/concrete%2Fconcrete13.jpg?alt=media&token=c763d337-c137-4b0f-a43d-575ee00d6fce" alt="">
           </a>
         </div>
+        
       </div>
      
     </div>
@@ -192,7 +237,7 @@
 </div>
 </div>
 </div>
-<form id="contact-form" action="https://formsubmit.co/daposada1000@gmail.com" method="POST" class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
+<form id="contact-form" action="https://formsubmit.co/piri.yanez@redfoxcontractor.com" method="POST" class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
 <div class="row">
 <div class="col-lg-6">
 <div class="single_form">
@@ -222,7 +267,7 @@
 <p class="form-message"></p>
 <div class="col-lg-12">
 <div class="single_form text-center">
-<button class="main-btn gradient-background" type="submit" disabled >SUBMIT</button>
+<button class="main-btn gradient-background" type="submit" >SUBMIT</button>
 </div>
 </div>
 </div>
@@ -248,10 +293,22 @@
 </footer>
 
     <a href="#" class="back-to-top"><i class="lni lni-chevron-up"></i></a>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-           integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-           crossorigin="anonymous">
-          </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind('[data-fancybox="gallery"]', {
+      infinite: false,
+      caption: function (fancybox, carousel, slide) {
+      return (
+        `${slide.index + 1} / ${carousel.slides.length} <br />` + slide.caption
+      );
+    },
+    });
+    </script>
            
   </body>
 </html>

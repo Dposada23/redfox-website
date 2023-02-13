@@ -6,11 +6,13 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="/Website/manifest.json">
     <link rel="manifest" href="assets/icons/site.webmanifest">
     <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#000000">
-    <link rel="stylesheet" href="main.scss" />
+    <link rel="stylesheet" href="main.scss"/>
+    <link rel="stylesheet" href="main.css"/>
     <link rel="manifest" href="/manifest.json" />
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/glide.core.css">
@@ -18,6 +20,9 @@
     <link rel="stylesheet" href="assets/css/bootstrap-5.0.5-alpha.min.css">
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href ="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
@@ -32,7 +37,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="white" />
   </head>
-
   <!--css only-->
     <style>
 .container {
@@ -89,13 +93,39 @@ h4{
   background: rgb(252,176,69);
   background: linear-gradient(90deg, rgba(252,176,69,1) 6%, rgba(252,74,26,1) 100%);
 }
-.font{
-  font-family: poppins;
-}
+*{
+         font-family: 'Bebas Neue', cursive; 
+       }
 
 .fancybox__slide {
   flex-direction: column-reverse;
-}     
+}    
+
+.service {
+			list-style-type: disc;
+			margin: 0;
+      font-size: 20px;
+			padding: 0;
+			overflow: hidden;
+      list-style-position: inside;
+		
+		}
+		.service li {
+			float: center;
+			color: white;
+			text-align: center;
+			padding: 14px 8px;
+			text-decoration: none;
+		}
+		
+		@media screen and (max-width: 650px) {
+			.service li {
+				float: none;
+        text-align: center;
+      
+			}
+		
+		}
   </style>
 
   <body style = "background-color: white">
@@ -118,16 +148,19 @@ h4{
       <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
       <ul id="nav" class="navbar-nav ml-auto">
       <li class="nav-item">
-      <a class="page-scroll active" href="index.html">Home</a>
+      <a class="page-scroll active" href="index.html#home">Home</a>
       </li>
       <li class="nav-item">
-      <a class="page-scroll" href="#about">About</a>
+      <a class="page-scroll" href="index.html#about">About</a>
       </li>
       <li class="nav-item">
-      <a class="page-scroll" href="#services">Services</a>
+        <a class="page-scroll" href="saftey.html">Saftey</a>
+        </li>
+      <li class="nav-item">
+      <a class="page-scroll" href="index.html#services">Services</a>
       </li>
       <li class="nav-item">
-      <a class="page-scroll" href="#team">Team</a>
+      <a class="page-scroll" href="index.html#team">Team</a>
       </li>
       <li class="nav-item">
       <a class="page-scroll " href="#contact">Contact</a>
@@ -153,10 +186,17 @@ h4{
       <div class="row justify-content-center">
       <div class="col-lg-8 col-md-10">
       <div class="hero_content text-center">
-      <h1 class= "hero_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s" style = "font-family: poppins"> <br />Metal Building Erections</h1>
+      <h1 class= "hero_title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s"> <br />Metal Building Erections</h1>
       <br>
-      <a class="page-scroll active" href="#services">
-      </a>
+      <div class="service-desc">
+        <ul class = "service wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.3s">
+           <li>METAL-BUILDING ERECTION</li>
+           <li>REPAIRS AND INSTALLATION</li>
+           <li>DISMANTLING</li>
+           <li>INSTALLATION OF GARAGE DOORS</li>
+           <li>ALL BOLT UP METAL BUILDING CONSTRUCTION</li>
+         </ul>
+       </div>
       </div>
       </div>
       </div>
@@ -175,45 +215,36 @@ h4{
       <div class="row text-center text-lg-start">
     
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug1.jpg?alt=media&token=ba3d802e-f77d-48b9-bdc6-2d8083903a22" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug1.jpg?alt=media&token=ba3d802e-f77d-48b9-bdc6-2d8083903a22" alt="">
+          <a href="#" data-fancybox ="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/metal-building-erection%2Fmetal-building1.avif?alt=media&token=07d0ac5f-0987-4e5d-a413-c80ed3a7c713" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/metal-building-erection%2Fmetal-building1.avif?alt=media&token=07d0ac5f-0987-4e5d-a413-c80ed3a7c713" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" data-fancybox ="gallery" data-src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug10.jpg?alt=media&token=ab51ccae-ccb6-4989-8891-3fd582692ffa" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug10.jpg?alt=media&token=ab51ccae-ccb6-4989-8891-3fd582692ffa" alt="">
+          <a href="#" data-fancybox ="gallery" data-src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/metal-building-erection%2Fmetal-building2.avif?alt=media&token=01293b76-08ee-411d-af42-611fb8c80e2e" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/metal-building-erection%2Fmetal-building2.avif?alt=media&token=01293b76-08ee-411d-af42-611fb8c80e2e" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" data-fancybox="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug11.jpg?alt=media&token=ffd7a701-e758-46ba-97e7-c082c56cf66f"class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug11.jpg?alt=media&token=ffd7a701-e758-46ba-97e7-c082c56cf66f" alt="">
+          <a href="#" data-fancybox="gallery" data-src ="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/metal-building-erection%2Fmetal-building3.avif?alt=media&token=dad52ed1-2dd0-4e51-bca0-1044307e4065"class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/metal-building-erection%2Fmetal-building3.avif?alt=media&token=dad52ed1-2dd0-4e51-bca0-1044307e4065" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" class="d-block mb-4 h-100"data-fancybox="gallery" data-src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug12.jpg?alt=media&token=78555583-91b2-4512-b7cd-4b99c30d410b">
-            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug12.jpg?alt=media&token=78555583-91b2-4512-b7cd-4b99c30d410b" alt="">
+          <a href="#" class="d-block mb-4 h-100"data-fancybox="gallery" data-src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/metal-building-erection%2Fmetal-building4.avif?alt=media&token=2720f8a0-92a2-405a-ba6f-76f0cefbae4c">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/metal-building-erection%2Fmetal-building4.avif?alt=media&token=2720f8a0-92a2-405a-ba6f-76f0cefbae4c" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" data-fancybox ="gallery" data-src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug13.jpg?alt=media&token=2b61f27a-c252-4bf2-b6fe-3360537aa2b5" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug13.jpg?alt=media&token=2b61f27a-c252-4bf2-b6fe-3360537aa2b5" alt="">
+          <a href="#" data-fancybox ="gallery" data-src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/metal-building-erection%2Fmetal-building6.avif?alt=media&token=437f9abe-4300-4155-988d-81e6b88d0a0d" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/metal-building-erection%2Fmetal-building6.avif?alt=media&token=437f9abe-4300-4155-988d-81e6b88d0a0d" alt="">
           </a>
         </div>
         <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" data-fancybox ="gallery" data-src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug14.jpeg?alt=media&token=0503bbb3-3b52-491e-9178-fc345a612889"class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug14.jpeg?alt=media&token=0503bbb3-3b52-491e-9178-fc345a612889" alt="">
+          <a href="#" data-fancybox ="gallery" data-src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/metal-building-erection%2Fmetal-building7.avif?alt=media&token=bb080bc7-4e01-4384-bb3e-0df82098204d"class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/metal-building-erection%2Fmetal-building7.avif?alt=media&token=bb080bc7-4e01-4384-bb3e-0df82098204d" alt="">
           </a>
         </div>
-        <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" data-fancybox ="gallery" data-src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug15.jpeg?alt=media&token=4900b730-ca38-45d9-b5e4-3d14cec0dfa1" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug15.jpeg?alt=media&token=4900b730-ca38-45d9-b5e4-3d14cec0dfa1" alt="">
-          </a>
-        </div>
-        <div class="col-lg-3 col-md-4 col-6">
-          <a href="#" data-fancybox ="gallery" data-src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug16.jpeg?alt=media&token=ba192d1c-30b2-4382-8fd9-890de1ac968c" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="https://firebasestorage.googleapis.com/v0/b/redfox-website-e16dc.appspot.com/o/underground-utility%2Fug16.jpeg?alt=media&token=ba192d1c-30b2-4382-8fd9-890de1ac968c" alt="">
-          </a>
-        </div>
+      
        
       </div>
     
@@ -229,7 +260,7 @@ h4{
 </div>
 </div>
 </div>
-<form id="contact-form" action="https://formsubmit.co/daposada1000@gmail.com" method="POST" class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
+<form id="contact-form" action="https://formsubmit.co/piri.yanez@redfoxcontractor.com" method="POST" class="wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.4s">
 <div class="row">
 <div class="col-lg-6">
 <div class="single_form">
@@ -259,7 +290,7 @@ h4{
 <p class="form-message"></p>
 <div class="col-lg-12">
 <div class="single_form text-center">
-<button class="main-btn gradient-background" type="submit" disabled>SUBMIT</button>
+<button class="main-btn gradient-background" type="submit" >SUBMIT</button>
 </div>
 </div>
 </div>
